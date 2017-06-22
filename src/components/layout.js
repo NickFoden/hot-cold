@@ -1,21 +1,20 @@
 import React from 'react';
 import Header from './header';
+import Body from './body';
 
 export default class Layout extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			currentGuess: null
+			currentGuess: 'null'
 		}
 	}
 
-	render(){
-		const Header = this.props.title;
-
+	render (){
 	return (
-	
 		<div className="Layout">
-			<div className={Header} />
+			<Header />
+			<Body />
 		</div>	
 			)	
 	}

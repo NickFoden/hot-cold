@@ -5,7 +5,7 @@ export default class Header extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			title: "what"
+			title: "Hot or Cold App"
 		}
 	}
 	render(){
