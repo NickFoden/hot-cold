@@ -1,6 +1,8 @@
 import React from 'react';
 import "./close.css"
 
+//Current Guess
+
 export default class Close extends React.Component {
 	constructor(props){
 		super(props);

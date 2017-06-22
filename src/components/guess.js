@@ -1,6 +1,7 @@
 import React from 'react';
 import './guess.css';
 
+//Current Guess
 export default class Guess extends React.Component {
 	constructor(props){
 		super(props);
