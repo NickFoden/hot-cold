@@ -10,7 +10,7 @@ export default class Close extends React.Component {
 	}
 	render(){
 		return (
-			<div className="Close">
+			<div className="Close" id={this.state.temp}>
 				{this.state.temp}
 			</div>	 
 

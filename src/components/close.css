@@ -3,3 +3,23 @@
 	width: 230px;
 	padding: 20px 0px 20px 0px;
 }
+
+#HOT {
+	background-color: #e01106;
+	width: 100%;
+}
+
+#FREEZING {
+	background-color: #0e37ef;
+	width: 100%;
+}
+
+#COLD {
+	background-color: #49afd1;
+	width: 100%;
+}
+
+#WARM {
+	background-color: #dd8b27;
+	width: 100%;
+}
