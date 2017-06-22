@@ -1,21 +1,23 @@
 import React from 'react';
 import './history.css';
 
-//List of past guesses - an array
+//List of past guesses - to be an array
 
 export default class History extends React.Component {
 	constructor(props){
 		super(props);
-		this.state = {
-			history: "Will be array of history"
-		}
 	}
 	render(){
+		const history = this.props.history.map((number, index) => (
+			<li key={index}>{number}</li>)); 
+
 		return (
 			<div className="History">
-				{this.state.history}
+				<ul>
+					{history}
+				</ul>	
 			</div>	 
 
-			)
+		)
 	}
 }

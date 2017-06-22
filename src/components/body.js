@@ -8,6 +8,9 @@ import './body.css';
 
 
 export default class Body extends React.Component {
+	constructor(props){
+		super(props);
+	}
 	render(){
 		return (
 			<div className="Container">
@@ -17,9 +20,9 @@ export default class Body extends React.Component {
 					<Guess />
 					<GuessNumber />
 				</div>	
-				<History />
+				<History history={this.props.history}/>
 			</div>	 
 
-			)
+		)
 	}
 }

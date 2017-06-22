@@ -1,6 +1,8 @@
 import React from 'react';
 import './header.css';
 
+//Title of page - add start over button soon
+
 export default class Header extends React.Component {
 	constructor(props){
 		super(props);
