@@ -1,4 +1,5 @@
 import React from 'react';
+import'./guessnumber.css'
 
 export default class GuessNumber extends React.Component {
 	constructor(props){
@@ -9,8 +10,8 @@ export default class GuessNumber extends React.Component {
 	}
 	render(){
 		return (
-			<div>
-				<h3>{this.state.guessNumbers}</h3>
+			<div className="GuessNumber">
+				{this.state.guessNumbers}
 			</div>	 
 
 			)

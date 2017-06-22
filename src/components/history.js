@@ -1,4 +1,5 @@
 import React from 'react';
+import './history.css';
 
 export default class History extends React.Component {
 	constructor(props){
@@ -9,8 +10,8 @@ export default class History extends React.Component {
 	}
 	render(){
 		return (
-			<div>
-				<h3>{this.state.history}</h3>
+			<div className="History">
+				{this.state.history}
 			</div>	 
 
 			)
