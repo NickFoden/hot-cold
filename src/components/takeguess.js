@@ -3,22 +3,14 @@ import "./takeguess.css"
 
 //Guess Input
 
-export default class TakeGuess extends React.Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			guess: "Past guesses"
-		}
-	}
-	render(){
+export default function TakeGuess (props){
 		return (
 			<div className="TakeGuess">
 				<form name="GuessForm">
-					<input type="text"></input>
+					<input type="text"placeholder="enter a number"></input>
 					<button type="submit">Guess</button>
 				</form>
 			</div>	 
 
 			)
 	}
-}
