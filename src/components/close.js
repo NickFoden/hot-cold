@@ -3,19 +3,11 @@ import "./close.css"
 
 //Current Guess
 
-export default class Close extends React.Component {
-	constructor(props){
-		super(props);
-		this.state = {
-			temp: "HOT"
-		}
-	}
-	render(){
-		return (
-			<div className="Close" id={this.state.temp}>
-				{this.state.temp}
-			</div>	 
+export default function Close (props) {
+	return (
+		<div className="Close" id={props.temp}>
+			{props.temp}
+		</div>	 
 
-			)
-	}
+		)
 }

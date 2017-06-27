@@ -5,3 +5,8 @@
 	padding: 10px;
 	height: 20px;
 }
+
+.li {
+	display: inline-block;
+	list-style-type : none;
+}
