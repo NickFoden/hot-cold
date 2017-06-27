@@ -11,15 +11,24 @@ export default class Layout extends React.Component {
 			currentGuess: '',
 			history: [],
 			target: Math.round(Math.random()*100),
-			feedback: 'make a guess'
+			feedback: 'Make a guess'
 		}
 	}
+
+	onGuess(guess){
+		console.log("Guess is working")
+	} 
 
 	render () {
 		return (
 			<div className="Layout">
 				<Header />
-				<Body history={this.state.history}/>
+				<Body 
+					onGuess={(guess) => this.onGuess(guess)}
+					guessnumber={this.state.history.length}
+					history={this.state.history} 
+					feedback={this.state.feedback}
+				/>
 			</div>	
 		)	
 	}

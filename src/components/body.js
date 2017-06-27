@@ -1,5 +1,4 @@
 import React from 'react';
-import Guess from './guess';
 import GuessNumber from './guessnumber';
 import History from './history';
 import TakeGuess from './takeguess';
@@ -7,20 +6,18 @@ import Close from './close';
 import './body.css';
 
 
-export default class Body extends React.Component {
+export default function Body (props) {
+	return (
+		<div className="Container">
+			<Close />
+			<div className="Guts">
+				<TakeGuess onGuess={props.onGuess}/>
+				<GuessNumber guessnumber={props.guessnumber} />
+			</div>	
+			<History history={props.history} />
+		</div>	 
 
-	render(){
-		return (
-			<div className="Container">
-				<Close />
-				<div className="Guts">
-					<TakeGuess />
-					<Guess />
-					<GuessNumber />
-				</div>	
-				<History history={this.props.history}/>
-			</div>	 
-
-		)
-	}
+	)
 }
+
+	

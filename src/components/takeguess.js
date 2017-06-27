@@ -4,20 +4,19 @@ import "./takeguess.css"
 //Guess Input
 
 export default class TakeGuess extends React.Component {
-	constructor(props){
-		super(props);
-		this.handleSubmit=this.handleSubmit.bind(this);
-	}
-	
 	handleSubmit(e){
 		e.preventDefault();
-		console.log("testing");
+		let currentGuess = this.input.value;
+		this.props.onGuess(currentGuess);	
 	}
+
 	render() {
 		return (
 			<div className="TakeGuess">
-				<form name="GuessForm" onSubmit={this.handleSubmit}>
-					<input type="number" placeholder="enter a number"></input>
+				<form name="GuessForm" onSubmit={e => this.handleSubmit(e)}>
+					<input type="number" placeholder="enter a number" 
+						ref={input => this.input = input}>
+					</input>
 					<button type="submit">Guess</button>
 				</form>
 			</div>	 
