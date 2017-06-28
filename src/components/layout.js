@@ -11,35 +11,35 @@ export default class Layout extends React.Component {
 			temp: 'COLD',
 			currentGuess: '',
 			history: [],
-			target: Math.round(Math.random()*100),
-			feedback: 'Make a guess'
+			target: Math.round(Math.random()*100)
 		}
 	}
 
 	onGuess(guess){
+		console.log(this.state.target);
 		this.setState({
 			currentGuess:guess,
-			history: [guess, ...this.state.history]
+			history: [...this.state.history, guess]
 		})
 
 		let result = Math.abs(this.state.currentGuess - this.state.target);
 
-		if (result > 25) {
+		if (result >= 25) {
 			this.setState({ 
 				temp: 'FREEZING'
 			})
 		}
-		else if (result > 15) {
+		else if (result >= 15) {
 			this.setState({
 				temp: 'COLD'
 			})
 		}
-		else if (result > 8) {
+		else if (result >= 10) {
 			this.setState({
 				temp: 'WARM'
 			})
 		}
-		else if (result > 4) {
+		else if (result >= 4) {
 			this.setState({
 				temp: 'HOT'
 			})
@@ -49,8 +49,7 @@ export default class Layout extends React.Component {
 				temp: 'BINGO'
 			})
 		}
-
-		} 
+	}	
 
 	render () {
 		return (
