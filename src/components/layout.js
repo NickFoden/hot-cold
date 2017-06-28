@@ -19,8 +19,36 @@ export default class Layout extends React.Component {
 	onGuess(guess){
 		this.setState({
 			currentGuess:guess,
-			history: [...this.state.history, guess]
+			history: [guess, ...this.state.history]
 		})
+
+		let result = Math.abs(this.state.currentGuess - this.state.target);
+
+		if (result > 25) {
+			this.setState({ 
+				temp: 'FREEZING'
+			})
+		}
+		else if (result > 15) {
+			this.setState({
+				temp: 'COLD'
+			})
+		}
+		else if (result > 8) {
+			this.setState({
+				temp: 'WARM'
+			})
+		}
+		else if (result > 4) {
+			this.setState({
+				temp: 'HOT'
+			})
+		}
+		else if (result === 0) {
+			this.setState({
+				temp: 'BINGO'
+			})
+		}
 
 		} 
 
