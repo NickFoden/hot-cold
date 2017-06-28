@@ -17,10 +17,10 @@ export default class Layout extends React.Component {
 	}
 
 	onGuess(guess){
-		this.setState({currentGuess:guess})
-		let history = this.state.history.slice()
-		history.push(guess)
-		this.setState({history:history})
+		this.setState({
+			currentGuess:guess,
+			history: [...this.state.history, guess]
+		})
 
 		} 
 
