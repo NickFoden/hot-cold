@@ -10,10 +10,15 @@ export default class Header extends React.Component {
 			title: "Hot or Cold App"
 		}
 	}
+	new(e){
+		e.preventDefault();
+		this.props.new();
+	}
 	render(){
 		return (
 			<div className="Header">
 				<h1>{this.state.title}</h1>
+				<button id="new" type="submit" onClick={e => this.new(e)}>New Game</button>
 			</div>	 
 
 			)

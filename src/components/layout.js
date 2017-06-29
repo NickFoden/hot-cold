@@ -15,6 +15,15 @@ export default class Layout extends React.Component {
 		}
 	}
 
+	new(e){
+		this.setState({
+			temp: 'COLD',
+			currentGuess: '',
+			history: [],
+			target: Math.round(Math.random()*100)
+		})
+	}
+
 	onGuess(guess){
 		console.log(this.state.target);
 		this.setState({
@@ -54,7 +63,7 @@ export default class Layout extends React.Component {
 	render () {
 		return (
 			<div className="Layout">
-				<Header />
+				<Header new={()=> this.new()}/>
 				<Body 
 					temp={this.state.temp}
 					onGuess={(guess) => this.onGuess(guess)}
