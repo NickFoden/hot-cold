@@ -9,5 +9,5 @@ export default function Close (props) {
 			{props.temp}
 		</div>	 
 
-		)
+	)
 }

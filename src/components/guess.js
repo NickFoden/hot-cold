@@ -7,5 +7,5 @@ export default function Guess (props) {
 			{props.guess}
 		</div>	 
 
-		)
+	)
 }

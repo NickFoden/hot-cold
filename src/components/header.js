@@ -21,6 +21,6 @@ export default class Header extends React.Component {
 				<button id="new" type="submit" onClick={e => this.new(e)}>New Game</button>
 			</div>	 
 
-			)
+		)
 	}
 }
